@@ -1,0 +1,309 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gabarito', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* header */
+header{
+    background-color: #9dbad3;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem;
+}
+.ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ul li a{
+    color: rgb(13, 77, 101);
+    letter-spacing: 2px;
+
+}
+
+
+.ul li a:hover{
+  color: #634ab4;
+    
+}
+
+
+
+/* DRAG & DROP style */
+#dragAndDrop{
+    background-color: #201643;
+}
+
+#dragAndDrop h1{
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 3px;
+
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#left, #right {
+    width: 300px;
+    min-height: 400px;
+    margin: 20px ;
+    border: 2px dashed #fff
+}
+
+.list{
+    background-color: rgb(255, 57, 140);
+    height: 60px;
+    margin: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+}
+
+.fa-ellipsis-vertical:nth-child(1){
+    margin-left: 20px;
+    margin-right: 3px;
+}
+
+.fa-ellipsis-vertical:nth-child(2){
+    margin-right: 15px;
+}
+
+/* PRELOADER style */
+
+#preloader{
+    background: #000 url(imgs/loader.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* WEATHER TAB */
+
+#weatherTab{
+    background: #0b0423;
+    padding: 5rem 0;
+    display: flex;
+    gap: 20%;
+    
+
+}
+
+.weather-title{
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    width: 50%;
+    margin-top: 30%;
+    text-wrap: balance;
+  
+}
+
+.weather-container{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(90deg, rgba(150,150,204,1) 0%, rgba(61,80,111,1) 100%, rgba(0,212,255,1) 100%);
+    color: #fff;
+    margin: 0 0 0 5rem ;
+    border-radius: 1rem;
+    padding: 40px 35px;
+    text-align: center;
+    
+    
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 1rem;
+    font-size: 1rem ;
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px ;
+    height: 60px;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass{
+    text-align: center;
+    font-size: x-large;
+    opacity: 70%;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+   margin-top: 5rem;
+   padding: 0 20px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.humidity, .wind{
+    font-size: 28px;
+    margin-top: -5px;
+}
+
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather >h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather> h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    width: 1rem;
+
+}
+
+::-webkit-scrollbar-track{
+    background-color: #b69797;
+}
+
+::-webkit-scrollbar-thumb{
+   border-radius: 10px;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+/* CALCULATOR */
+
+.calculator-container{
+    width: 100%;
+    /* height: 100vh; */
+    background:#9b96ac;
+    display: flex;
+    justify-content: right;
+}
+
+.title-div-cal{
+    margin: 10rem;
+    border: 3px solid red;
+}
+
+.calculator-container p{
+    text-wrap:balance;
+    width: 40%;
+    margin-top: 10rem;
+    text-align: start;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+}
+
+.calculator{
+    background:rgb(0, 39, 51);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5rem
+
+}
+
+.display .text-field{
+    color: white;
+}
+.calculator form input{
+    border: 0;
+    outline: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(0, 39, 51);
+}
+
+.calculator form input:hover{
+    scale: 0.9;
+    box-shadow: rgba(255, 250, 250, 0.24) 0px 3px 8px;
+}
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+}
+
+
+
+form .display input{
+   text-align: right;
+   flex: 1;
+   font-size: 3rem;
+   box-shadow: none;
+
+}
+
+form input.equal{
+    width: 130px;
+    color: #634ab4;
+    font-weight: bold;
+}
+
+form input.operator{
+    color: #634ab4;
+    font-weight: bold;
+}
+
+form input.numbers{
+    color: white;
+    
+    font-size: 20px;
+}
+
+
+
+

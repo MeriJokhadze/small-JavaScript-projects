@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="preloader">  </div>
+
+    <header>
+        <nav>
+            <ul class="ul">
+
+                <li><a href="#dragAndDrop">DRAG & DROP</a>  </li>
+                <li><a href="#weatherTab">WEATHER CHECKER </a> </li>
+                <li><a href="#calculator">CALCULATOR</a></li>
+            
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!--   DRAG & DROP   -->
+    <section id="dragAndDrop">
+        <h1> Here you see Drag and Drop function </h1>
+        <div class="container">
+            <div id="left">
+                <div class="list" draggable="true">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    list item
+                </div>
+                <div class="list" draggable="true">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    list item
+                </div>
+                <div class="list" draggable="true">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    list item
+                </div>
+                <div class="list" draggable="true">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    list item
+                </div>
+            </div>
+            <div id="right">
+                
+            </div>
+        </div>
+    </section>
+    <!-- WEATHER APP -->
+    <section id="weatherTab">
+        <div class="weather-container">
+            <div class="search">
+                <input type="text" placeholder="enter city name"
+                spellcheck="false">
+               <button> <i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="weather">
+                <img src="images/coverw.gif"  class="weather-icon" alt="weather-icon">
+                <h1 class="temp"> </h1>
+                <h2 class="city"></h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="images/humidity.png" alt="icon">
+                        <div>
+                            <p class="humidity"></p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="images/wind.png" alt="icon">
+                        <div>
+                            <p class="wind"></p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <div>
+        <h1 class="weather-title">Check current weather </h1>
+   </div>
+    </section>
+    <!-- CALCULATOR -->
+    <section id="calculator">   
+        <div class="calculator-container">
+            <p>HERE YOU CAN USE FANCY CALCULATOR</p>
+            <div class="calculator">
+                <form action="#">
+                    <div class="display">
+                        <input type="text" name="display" class="text-field">
+                    </div>
+                    <div >
+                        <input type="button" value="AC" class="operator" onclick="display.value =''">
+                        <input type="button" value="DE" class="operator" onclick="display.value = display.value.toString().slice(0,-1)">
+                        <input type="button" value="."  class="operator" onclick="display.value +='.'">
+                        <input type="button" value="/"  class="operator" onclick="display.value +='/'">
+                    </div>
+                    <div>
+                        <input type="button" value="7" class="numbers" onclick="display.value +='7'">
+                        <input type="button" value="8" class="numbers" onclick="display.value +='8'">
+                        <input type="button" value="9" class="numbers"  onclick="display.value +='9'">
+                        <input type="button" value="*" class="operator" onclick="display.value +='*'">
+                    </div>
+                    <div>
+                        <input type="button" value="4" class="numbers"  onclick="display.value +='4'">
+                        <input type="button" value="5" class="numbers" onclick="display.value +='5'">
+                        <input type="button" value="6" class="numbers"  onclick="display.value +='6'">
+                        <input type="button" value="-" class="operator"  onclick="display.value +='-'">
+                    </div>
+                    <div>
+                        <input type="button" value="1" class="numbers" onclick="display.value +='1'">
+                        <input type="button" value="2" class="numbers" onclick="display.value +='2'">
+                        <input type="button" value="3" class="numbers" onclick="display.value +='3'">
+                        <input type="button" value="+" class="operator" onclick="display.value +='+'">
+                    </div>
+                    <div>
+                        <input type="button" value="00" class="numbers" onclick="display.value +='00'">
+                        <input type="button" value="0" class="numbers" onclick="display.value +='0'">
+                        <input type="button" value="=" class="equal" onclick="display.value = eval(display.value)">
+                    
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <script src="../node_modules/axios/dist/axios.min.js" type="module"></script>
+    <script src="index.js" type="module" ></script>
+</body>
+</html>
