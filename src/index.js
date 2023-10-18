@@ -86,15 +86,15 @@ function weatherSearch(city){
         document.querySelector('.humidity').innerHTML = resultData.main.humidity + '%';
         
         if(resultData.weather[0].main === "Clouds"){
-            weatherIcon.src="images/clouds.png";
+            weatherIcon.src="./src/images/clouds.png";
         }else if(resultData.weather[0].main === "Clear"){
-            weatherIcon.src="images/clear.png";}
+            weatherIcon.src="./src/images/clear.png";}
         else if(resultData.weather[0].main === "Rain"){
-            weatherIcon.src="images/rain.png";}
+            weatherIcon.src="./src/images/rain.png";}
         else if(resultData.weather[0].main === "Drizzle"){
-            weatherIcon.src="images/drizzle.png";}
+            weatherIcon.src="./src/images/drizzle.png";}
         else if(resultData.weather[0].main === "Mist"){
-            weatherIcon.src="images/mist.png";}
+            weatherIcon.src="./src/images/mist.png";}
     })
     .catch(function(error){
         console.log(error)
