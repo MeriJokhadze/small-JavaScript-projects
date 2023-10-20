@@ -337,7 +337,7 @@ form input.numbers{
 }
 
 .quizz div h2{
-    letter-spacing: .2rem;
+    opacity: 0.9;
     margin-bottom: 1rem;
     font-size: x-large;
     text-align: center;
@@ -370,11 +370,22 @@ form input.numbers{
     padding: 20px;
     border-radius: 4px;
     border: none;
-    cursor: pointer;
-    
+    cursor: pointer; 
     display: block;
     transition: ease-out 300ms;
+}
 
+#checkBtn{
+    background-color: #201643;
+    color: #fff;
+    font-weight: 500;
+    width:100%;
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer; 
+    display: block;
+    transition: ease-out 300ms;
 }
 
 #nextBtn:hover{
@@ -382,6 +393,10 @@ form input.numbers{
     letter-spacing: 3px;
 }
 
+#scoreDisplay{
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
 
 
