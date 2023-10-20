@@ -1,15 +1,5 @@
 "use strict"
 
-const axios = require('axios');
-
-// IMPORT FILES // 
-
-
-// import { checkWeather } from "./weather";
-// checkWeather();
-
-// preloader
-
 
 // LOADER
 function loader() {
